@@ -1,0 +1,298 @@
+﻿
+
+    
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+    background:linear-gradient(180deg,rgba(80,80,79,1) 0%,rgba(41,41,41,1) 100%);
+	transition: .3s all ease;
+}
+
+.preloader.loaded {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.preloader-body {
+	text-align: center;
+}
+
+.preloader-body img {
+	margin-top: 50px;
+}
+
+.cssload-dots {
+	display: inline-block;
+	position: relative;
+}
+
+.cssload-dots:not(:last-child) {
+	margin-right: 9px;
+}
+
+.cssload-dots:before, .cssload-dots:after {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	position: absolute;
+}
+
+.cssload-dots:nth-child(1):before {
+	transform: translateY(-200%);
+	animation: cssload-animBefore 1.15s linear infinite;
+	animation-delay: -1.04s;
+	background-color: #FC6300;
+}
+
+.cssload-dots:nth-child(1):after {
+	transform: translateY(200%);
+	animation: cssload-animAfter 1.15s linear infinite;
+	animation-delay: -1.04s;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.cssload-dots:nth-child(2):before {
+	transform: translateY(-200%);
+	animation: cssload-animBefore 1.15s linear infinite;
+	animation-delay: -2.07s;
+	background-color: #FC6300;
+}
+
+.cssload-dots:nth-child(2):after {
+	transform: translateY(200%);
+	animation: cssload-animAfter 1.15s linear infinite;
+	animation-delay: -2.07s;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.cssload-dots:nth-child(3):before {
+	transform: translateY(-200%);
+	animation: cssload-animBefore 1.15s linear infinite;
+	animation-delay: -3.11s;
+	background-color: #FC6300;
+}
+
+.cssload-dots:nth-child(3):after {
+	transform: translateY(200%);
+	animation: cssload-animAfter 1.15s linear infinite;
+	animation-delay: -3.11s;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.cssload-dots:nth-child(4):before {
+	transform: translateY(-200%);
+	animation: cssload-animBefore 1.15s linear infinite;
+	animation-delay: -4.14s;
+	background-color: #FC6300;
+}
+
+.cssload-dots:nth-child(4):after {
+	transform: translateY(200%);
+	animation: cssload-animAfter 1.15s linear infinite;
+	animation-delay: -4.14s;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.cssload-dots:nth-child(5):before {
+	transform: translateY(-200%);
+	animation: cssload-animBefore 1.15s linear infinite;
+	animation-delay: -5.18s;
+	background-color: #FC6300;
+}
+
+.cssload-dots:nth-child(5):after {
+	transform: translateY(200%);
+	animation: cssload-animAfter 1.15s linear infinite;
+	animation-delay: -5.18s;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.cssload-dots:nth-child(6):before {
+	transform: translateY(-200%);
+	animation: cssload-animBefore 1.15s linear infinite;
+	animation-delay: -6.21s;
+	background-color: #FC6300;
+}
+
+.cssload-dots:nth-child(6):after {
+	transform: translateY(200%);
+	animation: cssload-animAfter 1.15s linear infinite;
+	animation-delay: -6.21s;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.cssload-dots:nth-child(7):before {
+	transform: translateY(-200%);
+	animation: cssload-animBefore 1.15s linear infinite;
+	animation-delay: -7.25s;
+	background-color: #FC6300;
+}
+
+.cssload-dots:nth-child(7):after {
+	transform: translateY(200%);
+	animation: cssload-animAfter 1.15s linear infinite;
+	animation-delay: -7.25s;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.cssload-dots:nth-child(8):before {
+	transform: translateY(-200%);
+	animation: cssload-animBefore 1.15s linear infinite;
+	animation-delay: -8.28s;
+	background-color: #FC6300;
+}
+
+.cssload-dots:nth-child(8):after {
+	transform: translateY(200%);
+	animation: cssload-animAfter 1.15s linear infinite;
+	animation-delay: -8.28s;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.cssload-dots:nth-child(9):before {
+	transform: translateY(-200%);
+	animation: cssload-animBefore 1.15s linear infinite;
+	animation-delay: -9.32s;
+	background-color: #FC6300;
+}
+
+.cssload-dots:nth-child(9):after {
+	transform: translateY(200%);
+	animation: cssload-animAfter 1.15s linear infinite;
+	animation-delay: -9.32s;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.cssload-dots:nth-child(10):before {
+	transform: translateY(-200%);
+	animation: cssload-animBefore 1.15s linear infinite;
+	animation-delay: -10.35s;
+	background-color: #FC6300;
+}
+
+.cssload-dots:nth-child(10):after {
+	transform: translateY(200%);
+	animation: cssload-animAfter 1.15s linear infinite;
+	animation-delay: -10.35s;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes cssload-animBefore {
+	0% {
+		transform: scale(1) translateY(-200%);
+		z-index: 1;
+	}
+	25% {
+		transform: scale(1.3) translateY(0);
+		z-index: 1;
+	}
+	50% {
+		transform: scale(1) translateY(200%);
+		z-index: -1;
+	}
+	75% {
+		transform: scale(0.7) translateY(0);
+		z-index: -1;
+	}
+	100% {
+		transform: scale(1) translateY(-200%);
+		z-index: -1;
+	}
+}
+
+@keyframes cssload-animAfter {
+	0% {
+		transform: scale(1) translateY(200%);
+		z-index: -1;
+	}
+	25% {
+		transform: scale(0.7) translateY(0);
+		z-index: -1;
+	}
+	50% {
+		transform: scale(1) translateY(-200%);
+		z-index: 1;
+	}
+	75% {
+		transform: scale(1.3) translateY(0);
+		z-index: 1;
+	}
+	100% {
+		transform: scale(1) translateY(200%);
+		z-index: 1;
+	}
+}
+
+/** @section ToTop */
+.ui-to-top {
+	position: fixed;
+	text-align: center;
+	overflow: hidden;
+	right: 15px;
+	bottom: 15px;
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	line-height: 46px;
+	border-radius: 50%;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+	text-decoration: none;
+	transition: .45s all ease-in-out;
+	transform: translate3d(0, 100px, 0);
+	z-index: 100;
+}
+
+.ui-to-top, .ui-to-top:focus, .ui-to-top:active {
+	color: #000000;
+	background: #fc6300;
+}
+
+.ui-to-top:hover {
+	color: #000000;
+	background: #ffffff;
+}
+
+.ui-to-top.active {
+	transform: translate3d(0, 0, 0);
+}
+
+html.mobile .ui-to-top,
+html.tablet .ui-to-top {
+	display: none !important;
+}
+
+@media (min-width: 576px) {
+	.ui-to-top {
+		right: 40px;
+		bottom: 40px;
+	}
+}
+
+/** @section RD Navbar */
+@keyframes rd-navbar-slide-down {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes rd-navbar-slide-up {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
+}
