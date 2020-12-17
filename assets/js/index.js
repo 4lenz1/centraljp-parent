@@ -56,14 +56,23 @@ $(document).ready(function () {
         var selectedNav = $('.trip_day li a.active');
         var selectedActive = selectedNav.text();
         var selectedHref = selectedNav.attr("href");
+        var dataTxt = $('#day-tab').attr("data-txt");
         $(".mobile_day").html("");
         $("<select class='form-control custom-select' />").appendTo(".mobile_day");
-
-        $("<option />", {
-            "selected": "selected",
-            "data-id": selectedHref,
-            "text": "目前選擇：" + selectedActive
-        }).appendTo(".mobile_day select");
+        if (dataTxt) {
+            $("<option />", {
+                "selected": "selected",
+                "data-id": selectedHref,
+                "text": dataTxt+"：" + selectedActive
+            }).appendTo(".mobile_day select");
+        } else {
+            $("<option />", {
+                "selected": "selected",
+                "data-id": selectedHref,
+                "text": "目前選擇：" + selectedActive
+            }).appendTo(".mobile_day select");
+        }
+        
 
         $(".trip_day li a").each(function () {
             var el = $(this);
@@ -73,8 +82,16 @@ $(document).ready(function () {
             }).appendTo(".mobile_day select");
         });
     }
+    function removeOption() {
+        $(".mobile_day select option").each(function () {
+            if ($(this).text().indexOf("目前") >= 0 || $(this).text().indexOf("선택") >= 0) {
+                $(this).remove();
+            }
+        });
+    }
     subMenu();
     $(document).on('change', '.mobile_day select', function () {
+        removeOption();
         var hrefid = $(this).find("option:selected").attr("data-id");
         $('#day-tab a[href="' + hrefid + '"]').tab('show');
     });
@@ -90,12 +107,21 @@ $(document).ready(function () {
         var index = $('.trip_day .nav-link.active').closest('.nav-item').index();
         index = index + 1;
         $('#day-tab li:nth-child(' + (index + 1) + ') a').tab('show');
+        if ($(".mobile_day select")) {
+            removeOption();
+            $(".mobile_day select option:eq(" + index + ")").prop("selected", 'selected');
+        }
+        
     });
     $(document).on('click', '.page-box .item-prev', function () {
         var index = $('.trip_day .nav-link.active').closest('.nav-item').index();
         index = index + 1;
-        console.log(index);
         $('#day-tab li:nth-child(' + (index - 1) + ') a').tab('show');
+
+        if ($(".mobile_day select")) {
+            var num = $('.trip_day .nav-link.active').closest('.nav-item').index();
+            $(".mobile_day select option:eq(" + (num) + ")").prop("selected", 'selected');
+        }
     });
     $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
         var index = $('.trip_day .nav-link.active').closest('.nav-item').index();

@@ -652,18 +652,18 @@ footer .lists .list .__href:after{
 footer .lists .list .__href:hover:after{
    animation: fly 2s ease 1;
 }
-@keyframes fly {
-  0% {
-    transform: translateX(0%);
-  }
-
-  50% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
+@keyframes fly {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 .foot_title {
     font-size: 40px;
@@ -1289,7 +1289,11 @@ letter-spacing: 1px;
         margin-bottom: 20px;
     }
     .trip_day {
-        display:none;
+        /*display:none;*/
+        opacity: 0;
+        height: 0;
+            width: 0;
+    overflow: hidden;
     }
     .mobile_day {
         display:block;
