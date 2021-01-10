@@ -1,0 +1,7 @@
+[
+    {
+        "route": "/tw",
+        "serve": "/tw/index.html",
+        "statusCode": 301
+    }
+]
