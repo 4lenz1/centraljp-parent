@@ -4,6 +4,22 @@
             "route": "/tw",
             "serve": "/tw/index.html",
             "statusCode": 301
+        },
+        {
+            "route": "/hk",
+            "serve": "/hk/index.html",
+            "statusCode": 301
+        },
+        {
+            "route": "/chs",
+            "serve": "/chs/index.html",
+            "statusCode": 301
+        }
+        ,
+        {
+            "route": "/kr",
+            "serve": "/kr/index.html",
+            "statusCode": 301
         }
     ]
 }
