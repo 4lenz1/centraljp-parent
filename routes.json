@@ -14,12 +14,17 @@
             "route": "/chs",
             "serve": "/chs/index.html",
             "statusCode": 301
-        }
-        ,
+        },
         {
             "route": "/kr",
             "serve": "/kr/index.html",
             "statusCode": 301
+        }
+    ],
+    "platformErrorOverrides": [
+        {
+            "errorType": "NotFound",
+            "serve": "/"
         }
     ]
 }
